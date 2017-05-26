@@ -1,0 +1,53 @@
+---
+#
+# roles/git2x/tasks/main.yml
+#
+
+# - name: gitが入っているか確認したい
+
+# - name: create temp directory
+#   file: >
+#     path="{{ item }}"
+#     state=directory
+#     mode=0777
+#     group=root
+#     owner=root
+#     force=yes
+#   with_items:
+#   - /usr/local/src/git
+
+- name: clone git repository
+  git:
+    repo: 'git://git.kernel.org/pub/scm/git/git.git'
+    dest: '/usr/local/src/git'
+    update: yes
+    version: master
+
+- name: remove git of old version
+  yum:
+    name: git
+    state: removed
+
+- name: command make all
+  shell: make prefix=/usr/local all
+  args:
+    chdir: /usr/local/src/git/
+
+- name: command make install
+  shell: make prefix=/usr/local install
+  args:
+    chdir: /usr/local/src/git/
+
+# - name: add PATH of git
+#   shell: "export PATH" > /etc/profile
+
+- name: add PATH of git
+  lineinfile:
+    dest: /etc/profile
+    backup: yes
+    line: "{{ item }}"
+  with_items:
+  - 'export PATH=$PATH:/usr/local/bin'
+
+- name: setting PATH
+  shell: "export PATH"

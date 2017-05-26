@@ -1,0 +1,112 @@
+---
+#
+# roles/common/tasks/main.yml
+#
+
+# - name: replace rsyslog.conf
+#   copy: >
+#     src=roles/common/templates/50-default.conf.j2
+#     dest=/etc/rsyslog.d/50-default.conf 
+#   ignore_errors: true
+#   
+# - name: restart rsyslog
+#   service: name=rsyslog state=restarted
+#   ignore_errors: true
+# 
+# - name: apt update
+#   apt: upgrade=dist 
+#   ignore_errors: true
+
+- name: install packages
+  yum: 
+    name: "{{ item }}"
+    update_cache: yes
+    enablerepo: epel,remi
+    state: latest
+  with_items:
+  - curl
+  - openssl
+  - tree
+  - telnet
+  - mlocate
+  - expect
+  - dstat
+  - vim
+  - git
+  - unzip
+  - htop
+  - nkf
+  - bzip2
+
+- name: install developer packages for git
+  yum: 
+    name: "{{ item }}"
+    update_cache: yes
+    enablerepo: epel,remi
+    state: latest
+  with_items:
+  - curl-devel
+  - expat-devel
+  - gettext-devel
+  - openssl-devel
+  - zlib-devel 
+  - perl-ExtUtils-MakeMaker
+
+- name: install developer packages for ruby
+  yum: 
+    name: "{{ item }}"
+    update_cache: yes
+    enablerepo: epel,remi
+    state: latest
+  with_items:
+  - readline-devel
+
+- name: change localtime to JST
+  file:
+    src: /usr/share/zoneinfo/Asia/Tokyo
+    dest: /etc/localtime
+    force: yes
+    state: link
+
+- name: setting locale
+  shell: echo 'LANG="ja_JP.utf8"' > /etc/locale.conf
+
+- name: stop unuse service
+  systemd: 
+    name: "{{ item }}"
+    state: stopped
+    daemon_reload: no
+    enabled: no
+  with_items:
+  - firewalld
+  - kdump
+  - NetworkManager
+  ignore_errors: true
+ 
+- name: disable selinux (temp)
+  shell: setenforce 0
+
+- name: disable selinux (permanently)
+  lineinfile: 
+    dest: '/etc/sysconfig/selinux'
+    state: present
+    backrefs: yes
+    regexp: "{{ item }}"
+    line: 'SELINUX=disabled'
+  with_items:
+  - SELINUX=enforcing
+  - SELINUX=permissive
+  ignore_errors: true
+
+- name: production basic directory
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: 0777
+    group: root
+    owner: root
+    force: yes
+  with_items:
+  - /srv
+  - /usr/share/data
+  - /opt

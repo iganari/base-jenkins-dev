@@ -1,0 +1,7 @@
+---
+#
+# roles/vagrant/tasks/main.yml
+#
+
+- name: setting prompt color 
+  shell: echo 'export PS1="\[\033[1;34m\][\\t][\u@\h \W]\\$\[\033[0m\] "' >> /home/vagrant/.bashrc 

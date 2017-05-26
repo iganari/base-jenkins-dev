@@ -1,0 +1,10 @@
+---
+#
+# roles/java/vars/main.yml
+#
+
+# Java SE Development Kit SITE
+# http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+java:
+  get_url: "http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163"
+  get_rpm: "jdk-8u131-linux-x64.rpm"

@@ -1,0 +1,28 @@
+---
+#
+# roles/jenkins/tasks/main.yml
+#
+
+- name: get jenkins repo
+  shell: wget -O {{ jenkins.repo_path }} {{ jenkins.pkg_url }}
+
+- name: inport public key
+  shell: rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+
+- name: install jenkins from pkg
+  yum:
+    name: jenkins
+    update_cache: yes
+    enablerepo: jenkins
+    state: latest
+  notify: start jenkins
+
+- name: <temp role> rename
+  shell: mv /var/lib/jenkins /var/lib/jenkins.org
+
+- name: create link
+  file:
+    src: /develop/base-jenkins/app
+    dest: /var/lib/jenkins
+    state: link 
+

@@ -1,0 +1,14 @@
+---
+#
+# webserver.yml
+#
+
+- hosts: vagrant-web
+  vars:
+    - node: development
+  roles:
+    - common
+    - git2x
+    - java
+    - jenkins
+    - vagrant

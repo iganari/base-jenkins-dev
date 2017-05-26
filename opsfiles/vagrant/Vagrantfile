@@ -1,0 +1,37 @@
+Vagrant.configure(2) do |config|
+  # config.vbguest.auto_update = false
+
+  if Vagrant.has_plugin?("vagrant-cachier")
+    config.cache.scope = :box
+  end
+
+  config.vm.define :web do |server|
+    ### determined specific IP.
+    server.vm.network "private_network", ip: "192.168.33.51"
+    ### hostname of server
+    server.vm.hostname = 'base-jenkins'
+    ### box setting
+    server.vm.box = "bento/centos-7.3"
+    ### vm setting
+    server.vm.provider "virtualbox" do |vb|
+      ### name of virtualbox
+      vb.name = "base-jenkins"
+      ### spec define
+      vb.customize ['modifyvm', :id,"--memory", 1024]
+      vb.customize ['modifyvm', :id,"--natdnshostresolver1", "on"]
+      vb.customize ['modifyvm', :id,"--natdnsproxy1", "on"]
+    end
+
+    ### settitng of synced_folder
+    server.vm.synced_folder "../../", "/develop/base-jenkins", \
+      :create => true, \
+      :owner  => 'vagrant', \
+      :group  => 'vagrant', \
+      :mount_options => ['dmode=777,fmode=777']
+
+    server.vm.provision :shell, :inline => <<SCRIPT
+      cd /develop/base-jenkins/opsfiles/vagrant/package-ansible
+      /bin/bash provision.sh vagrant-web webserver.yml
+SCRIPT
+  end
+end

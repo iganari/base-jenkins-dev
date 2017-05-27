@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: ikedam
+Build-Jdk: 1.6.0_45
+Extension-Name: flexible-publish
+Specification-Title: Choose the order of publisher execution and make 
+ the execution conditional
+Implementation-Title: flexible-publish
+Implementation-Version: 0.15.2
+Group-Id: org.jenkins-ci.plugins
+Short-Name: flexible-publish
+Long-Name: Flexible Publish Plugin
+Url: http://wiki.jenkins-ci.org/display/JENKINS/Flexible+Publish+Plugin
+Compatible-Since-Version: 0.15
+Plugin-Version: 0.15.2
+Hudson-Version: 1.425
+Jenkins-Version: 1.425
+Plugin-Dependencies: token-macro:1.5.1,run-condition:0.7
+Plugin-Developers: Bap:bap:bap-jenkins@BapIT.co.uk,IKEDA Yasuyuki:iked
+ am:
+

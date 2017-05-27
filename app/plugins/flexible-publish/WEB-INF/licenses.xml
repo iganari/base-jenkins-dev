@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<l:dependencies xmlns:l='licenses' groupId='org.jenkins-ci.plugins' artifactId='flexible-publish' version='0.15.2'><l:dependency name='Flexible Publish Plugin' groupId='org.jenkins-ci.plugins' artifactId='flexible-publish' version='0.15.2' url='http://wiki.jenkins-ci.org/display/JENKINS/Flexible+Publish+Plugin'><l:description>Choose the order of publisher execution and make the execution conditional</l:description><l:license name='The MIT license' url=''/></l:dependency></l:dependencies>

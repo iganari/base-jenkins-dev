@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: jiangenj
+Build-Jdk: 1.7.0_21
+Extension-Name: discard-old-build
+Specification-Title: Add post-build step to discard old builds with de
+ tail configuration
+Implementation-Title: discard-old-build
+Implementation-Version: 1.05
+Group-Id: jp.shiftinc.jenkins.plugins
+Short-Name: discard-old-build
+Long-Name: Discard Old Build plugin
+Url: http://wiki.jenkins-ci.org/display/JENKINS/Discard+Old+Build+plugin
+Plugin-Version: 1.05
+Hudson-Version: 1.515
+Jenkins-Version: 1.515
+Plugin-Developers: Hiroko Tamagawa:nkns165:nkns165@gmail.com,Joey Jiao
+ :joeyjiao:joey.jiaojg@gmail.com
+

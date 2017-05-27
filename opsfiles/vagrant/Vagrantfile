@@ -7,15 +7,15 @@ Vagrant.configure(2) do |config|
 
   config.vm.define :web do |server|
     ### determined specific IP.
-    server.vm.network "private_network", ip: "192.168.33.51"
+    server.vm.network "private_network", ip: "192.168.33.61"
     ### hostname of server
-    server.vm.hostname = 'base-jenkins'
+    server.vm.hostname = 'base-jenkins-dev'
     ### box setting
     server.vm.box = "bento/centos-7.3"
     ### vm setting
     server.vm.provider "virtualbox" do |vb|
       ### name of virtualbox
-      vb.name = "base-jenkins"
+      vb.name = "base-jenkins-dev"
       ### spec define
       vb.customize ['modifyvm', :id,"--memory", 1024]
       vb.customize ['modifyvm', :id,"--natdnshostresolver1", "on"]

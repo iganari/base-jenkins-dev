@@ -1,2 +1,2 @@
 *.vagrant
-app/logs/tasks/*
+app/logs/tasks/Download*

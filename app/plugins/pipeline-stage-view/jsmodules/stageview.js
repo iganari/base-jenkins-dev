@@ -5523,29 +5523,31 @@ module.exports = HandlebarsCompiler.template({"1":function(depth0,helpers,partia
     var stack1, alias1=helpers.helperMissing;
 
   return ((stack1 = (helpers.ifCond || (depth0 && depth0.ifCond) || alias1).call(depth0,(depth0 != null ? depth0.type : depth0),"===","BooleanParameterDefinition",{"name":"ifCond","hash":{},"fn":this.program(2, data, 0, blockParams, depths),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + ((stack1 = (helpers.ifCond || (depth0 && depth0.ifCond) || alias1).call(depth0,(depth0 != null ? depth0.type : depth0),"===","StringParameterDefinition",{"name":"ifCond","hash":{},"fn":this.program(5, data, 0, blockParams, depths),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + ((stack1 = (helpers.ifCond || (depth0 && depth0.ifCond) || alias1).call(depth0,(depth0 != null ? depth0.type : depth0),"===","TextParameterDefinition",{"name":"ifCond","hash":{},"fn":this.program(5, data, 0, blockParams, depths),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + ((stack1 = (helpers.ifCond || (depth0 && depth0.ifCond) || alias1).call(depth0,(depth0 != null ? depth0.type : depth0),"===","PasswordParameterDefinition",{"name":"ifCond","hash":{},"fn":this.program(7, data, 0, blockParams, depths),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + ((stack1 = (helpers.ifCond || (depth0 && depth0.ifCond) || alias1).call(depth0,(depth0 != null ? depth0.type : depth0),"===","ChoiceParameterDefinition",{"name":"ifCond","hash":{},"fn":this.program(9, data, 0, blockParams, depths),"inverse":this.noop,"data":data})) != null ? stack1 : "");
+    + ((stack1 = (helpers.ifCond || (depth0 && depth0.ifCond) || alias1).call(depth0,(depth0 != null ? depth0.type : depth0),"===","StringParameterDefinition",{"name":"ifCond","hash":{},"fn":this.program(7, data, 0, blockParams, depths),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = (helpers.ifCond || (depth0 && depth0.ifCond) || alias1).call(depth0,(depth0 != null ? depth0.type : depth0),"===","TextParameterDefinition",{"name":"ifCond","hash":{},"fn":this.program(7, data, 0, blockParams, depths),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = (helpers.ifCond || (depth0 && depth0.ifCond) || alias1).call(depth0,(depth0 != null ? depth0.type : depth0),"===","PasswordParameterDefinition",{"name":"ifCond","hash":{},"fn":this.program(9, data, 0, blockParams, depths),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = (helpers.ifCond || (depth0 && depth0.ifCond) || alias1).call(depth0,(depth0 != null ? depth0.type : depth0),"===","ChoiceParameterDefinition",{"name":"ifCond","hash":{},"fn":this.program(11, data, 0, blockParams, depths),"inverse":this.noop,"data":data})) != null ? stack1 : "");
 },"2":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
   return "                <div class=\"checkbox\">\n                    <label>\n                        <input name=\""
     + alias3(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"name","hash":{},"data":data}) : helper)))
-    + "\" type=\"checkbox\" checked=\""
-    + alias3(this.lambda(((stack1 = (depth0 != null ? depth0.definition : depth0)) != null ? stack1.defaultVal : stack1), depth0))
-    + "\">"
+    + "\" type=\"checkbox\" "
+    + ((stack1 = helpers['if'].call(depth0,((stack1 = (depth0 != null ? depth0.definition : depth0)) != null ? stack1.defaultVal : stack1),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ">"
     + alias3(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"name","hash":{},"data":data}) : helper)))
     + "\n                    </label>\n                    "
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.description : depth0),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.description : depth0),{"name":"if","hash":{},"fn":this.program(5, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "\n                </div>\n";
 },"3":function(depth0,helpers,partials,data) {
+    return "checked=\"checked\"";
+},"5":function(depth0,helpers,partials,data) {
     var helper;
 
   return "<p class=\"help-block\">"
     + this.escapeExpression(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"description","hash":{},"data":data}) : helper)))
     + "</p>";
-},"5":function(depth0,helpers,partials,data) {
+},"7":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
   return "                <div class=\"form-group\">\n                    <label for=\""
@@ -5563,9 +5565,9 @@ module.exports = HandlebarsCompiler.template({"1":function(depth0,helpers,partia
     + "\" value=\""
     + alias3(this.lambda(((stack1 = (depth0 != null ? depth0.definition : depth0)) != null ? stack1.defaultVal : stack1), depth0))
     + "\">\n                    "
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.description : depth0),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.description : depth0),{"name":"if","hash":{},"fn":this.program(5, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "\n                </div>\n";
-},"7":function(depth0,helpers,partials,data) {
+},"9":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
   return "                <div class=\"form-group\">\n                    <label for=\""
@@ -5583,9 +5585,9 @@ module.exports = HandlebarsCompiler.template({"1":function(depth0,helpers,partia
     + "\" value=\""
     + alias3(this.lambda(((stack1 = (depth0 != null ? depth0.definition : depth0)) != null ? stack1.defaultVal : stack1), depth0))
     + "\" placeholder=\"Password\">\n                    "
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.description : depth0),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.description : depth0),{"name":"if","hash":{},"fn":this.program(5, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "\n                </div>\n";
-},"9":function(depth0,helpers,partials,data,blockParams,depths) {
+},"11":function(depth0,helpers,partials,data,blockParams,depths) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
   return "                <div class=\"form-group\">\n                    <label for=\""
@@ -5601,20 +5603,20 @@ module.exports = HandlebarsCompiler.template({"1":function(depth0,helpers,partia
     + "-input-"
     + alias3(((helper = (helper = helpers.index || (data && data.index)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"index","hash":{},"data":data}) : helper)))
     + "\">\n"
-    + ((stack1 = helpers.each.call(depth0,((stack1 = (depth0 != null ? depth0.definition : depth0)) != null ? stack1.choices : stack1),{"name":"each","hash":{},"fn":this.program(10, data, 0, blockParams, depths),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers.each.call(depth0,((stack1 = (depth0 != null ? depth0.definition : depth0)) != null ? stack1.choices : stack1),{"name":"each","hash":{},"fn":this.program(12, data, 0, blockParams, depths),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "                    </select>\n                    "
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.description : depth0),{"name":"if","hash":{},"fn":this.program(3, data, 0, blockParams, depths),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.description : depth0),{"name":"if","hash":{},"fn":this.program(5, data, 0, blockParams, depths),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "\n                </div>\n";
-},"10":function(depth0,helpers,partials,data,blockParams,depths) {
+},"12":function(depth0,helpers,partials,data,blockParams,depths) {
     var stack1, alias1=helpers.helperMissing;
 
-  return ((stack1 = (helpers.ifCond || (depth0 && depth0.ifCond) || alias1).call(depth0,depth0,"===",(depths[1] != null ? depths[1].defaultVal : depths[1]),{"name":"ifCond","hash":{},"fn":this.program(11, data, 0, blockParams, depths),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + ((stack1 = (helpers.ifCond || (depth0 && depth0.ifCond) || alias1).call(depth0,depth0,"!==",(depths[1] != null ? depths[1].defaultVal : depths[1]),{"name":"ifCond","hash":{},"fn":this.program(13, data, 0, blockParams, depths),"inverse":this.noop,"data":data})) != null ? stack1 : "");
-},"11":function(depth0,helpers,partials,data) {
+  return ((stack1 = (helpers.ifCond || (depth0 && depth0.ifCond) || alias1).call(depth0,depth0,"===",(depths[1] != null ? depths[1].defaultVal : depths[1]),{"name":"ifCond","hash":{},"fn":this.program(13, data, 0, blockParams, depths),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = (helpers.ifCond || (depth0 && depth0.ifCond) || alias1).call(depth0,depth0,"!==",(depths[1] != null ? depths[1].defaultVal : depths[1]),{"name":"ifCond","hash":{},"fn":this.program(15, data, 0, blockParams, depths),"inverse":this.noop,"data":data})) != null ? stack1 : "");
+},"13":function(depth0,helpers,partials,data) {
     return "                            <option selected>"
     + this.escapeExpression(this.lambda(depth0, depth0))
     + "</option>\n";
-},"13":function(depth0,helpers,partials,data) {
+},"15":function(depth0,helpers,partials,data) {
     return "                            <option>"
     + this.escapeExpression(this.lambda(depth0, depth0))
     + "</option>\n";
@@ -5640,7 +5642,7 @@ module.exports = HandlebarsCompiler.template({"1":function(depth0,helpers,partia
 },"2":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return ((stack1 = helpers['if'].call(depth0,((stack1 = ((stack1 = (depth0 != null ? depth0._links : depth0)) != null ? stack1.log : stack1)) != null ? stack1.href : stack1),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.program(6, data, 0),"data":data})) != null ? stack1 : "");
+  return ((stack1 = helpers['if'].call(depth0,((stack1 = ((stack1 = (depth0 != null ? depth0._links : depth0)) != null ? stack1.log : stack1)) != null ? stack1.href : stack1),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.program(8, data, 0),"data":data})) != null ? stack1 : "");
 },"3":function(depth0,helpers,partials,data) {
     var stack1, alias1=this.lambda, alias2=this.escapeExpression;
 
@@ -5650,14 +5652,20 @@ module.exports = HandlebarsCompiler.template({"1":function(depth0,helpers,partia
     + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0._links : depth0)) != null ? stack1.log : stack1)) != null ? stack1.href : stack1), depth0))
     + "\">\n            <div class=\"node-name\"><span class=\"glyphicon glyphicon-collapse-down\" title=\"Expand\"></span><span class=\"glyphicon glyphicon-collapse-up\" title=\"Collapse\"></span>\n                "
     + alias2(alias1((depth0 != null ? depth0.name : depth0), depth0))
-    + "  "
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.durationMillis : depth0),{"name":"if","hash":{},"fn":this.program(4, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.parameterDescription : depth0),{"name":"if","hash":{},"fn":this.program(4, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "                "
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.durationMillis : depth0),{"name":"if","hash":{},"fn":this.program(6, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "\n            </div>\n            <div class=\"log-details\"></div>\n        </div>\n";
 },"4":function(depth0,helpers,partials,data) {
-    return "(self time "
+    return "                    -- "
+    + this.escapeExpression(this.lambda((depth0 != null ? depth0.parameterDescription : depth0), depth0))
+    + " --\n";
+},"6":function(depth0,helpers,partials,data) {
+    return " (self time "
     + this.escapeExpression((helpers.formatTime || (depth0 && depth0.formatTime) || helpers.helperMissing).call(depth0,(depth0 != null ? depth0.durationMillis : depth0),{"name":"formatTime","hash":{},"data":data}))
     + ")";
-},"6":function(depth0,helpers,partials,data) {
+},"8":function(depth0,helpers,partials,data) {
     var stack1, alias1=this.lambda, alias2=this.escapeExpression;
 
   return "        <div class=\"node-log-frame "
@@ -5667,8 +5675,12 @@ module.exports = HandlebarsCompiler.template({"1":function(depth0,helpers,partia
     + "\">\n            <div class=\"node-name\">"
     + alias2(alias1((depth0 != null ? depth0.name : depth0), depth0))
     + "  "
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.durationMillis : depth0),{"name":"if","hash":{},"fn":this.program(4, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.durationMillis : depth0),{"name":"if","hash":{},"fn":this.program(9, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "</div>\n        </div>\n";
+},"9":function(depth0,helpers,partials,data) {
+    return "(self time "
+    + this.escapeExpression((helpers.formatTime || (depth0 && depth0.formatTime) || helpers.helperMissing).call(depth0,(depth0 != null ? depth0.durationMillis : depth0),{"name":"formatTime","hash":{},"data":data}))
+    + ")";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 

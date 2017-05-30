@@ -2,12 +2,12 @@
 
 ### 目的
 
-0からjenkinsを立ち上げるところまで。
+すでにjenkinsが作成されているもの。
 
 ### repositoryの取得
 
 ```
-$ git clone git@github.com:iganari/base-jenkins.git
+$ git clone git@github.com:iganari/base-jenkins-dev.git
 ```
 
 ### vagrant立ち上げ
@@ -15,14 +15,6 @@ $ git clone git@github.com:iganari/base-jenkins.git
 ```
 $ cd opsfiles/vagrant
 $ vagrant up
-```
-
-### 取得
-
-+ securely password
-
-```
-$ ssh -i opsfiles/vagrant/.vagrant/machines/web/virtualbox/private_key vagrant@192.168.33.51 "sudo cat /var/lib/jenkins/secrets/initialAdminPassword"
 ```
 
 ### ブラウザでjenkinsにアクセス

@@ -1,2 +1,3 @@
 *.vagrant
-app/logs/tasks/Download*
+app/logs/tasks/*
+!app/logs/tasks/.gitkeep

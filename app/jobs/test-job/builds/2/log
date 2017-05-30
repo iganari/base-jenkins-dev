@@ -1,0 +1,34 @@
+Started by user [8mha:////4IgEE/BC+vGEW5qBO3KYLWd+hfxyk/bdsn1Omph25h3SAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZe/dLi1CL9rNS87My8YgDGtiJjwgAAAA==[0mjenkins
+Building in workspace /var/lib/jenkins/workspace/test-job
+[test-job] $ /bin/sh -xe /tmp/hudson3885145794498985014.sh
++ env
+HUDSON_SERVER_COOKIE=d00f6af7187fd82e
+SHELL=/bin/bash
+BUILD_TAG=jenkins-test-job-2
+WORKSPACE=/var/lib/jenkins/workspace/test-job
+RUN_CHANGES_DISPLAY_URL=http://unconfigured-jenkins-location/job/test-job/2/display/redirect?page=changes
+USER=jenkins
+NLSPATH=/usr/dt/lib/nls/msg/%L/%N.cat
+JENKINS_HOME=/var/lib/jenkins
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+RUN_DISPLAY_URL=http://unconfigured-jenkins-location/job/test-job/2/display/redirect
+_=/bin/env
+PWD=/develop/base-jenkins/app/workspace/test-job
+LANG=en_US.UTF-8
+JOB_NAME=test-job
+BUILD_DISPLAY_NAME=#2
+XFILESEARCHPATH=/usr/dt/app-defaults/%L/Dt
+BUILD_ID=2
+JOB_BASE_NAME=test-job
+SHLVL=3
+HOME=/var/lib/jenkins
+EXECUTOR_NUMBER=0
+JENKINS_SERVER_COOKIE=d00f6af7187fd82e
+NODE_LABELS=master
+LOGNAME=jenkins
+HUDSON_HOME=/var/lib/jenkins
+NODE_NAME=master
+JOB_DISPLAY_URL=http://unconfigured-jenkins-location/job/test-job/display/redirect
+BUILD_NUMBER=2
+HUDSON_COOKIE=b108824a-6769-472e-8164-737c9a42de56
+Finished: SUCCESS

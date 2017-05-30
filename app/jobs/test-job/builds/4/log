@@ -1,0 +1,39 @@
+Started by user [8mha:////4IgEE/BC+vGEW5qBO3KYLWd+hfxyk/bdsn1Omph25h3SAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZe/dLi1CL9rNS87My8YgDGtiJjwgAAAA==[0mjenkins
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/workspace/test-job
+[test-job] $ /bin/sh -xe /tmp/hudson2586862255549299380.sh
++ env
+HUDSON_SERVER_COOKIE=d00f6af7187fd82e
+SHELL=/bin/bash
+BUILD_TAG=jenkins-test-job-4
+ROOT_BUILD_CAUSE=MANUALTRIGGER
+WORKSPACE=/var/lib/jenkins/workspace/test-job
+RUN_CHANGES_DISPLAY_URL=http://unconfigured-jenkins-location/job/test-job/4/display/redirect?page=changes
+USER=jenkins
+NLSPATH=/usr/dt/lib/nls/msg/%L/%N.cat
+JENKINS_HOME=/var/lib/jenkins
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+RUN_DISPLAY_URL=http://unconfigured-jenkins-location/job/test-job/4/display/redirect
+_=/bin/env
+BUILD_CAUSE_MANUALTRIGGER=true
+PWD=/develop/base-jenkins/app/workspace/test-job
+LANG=en_US.UTF-8
+JOB_NAME=test-job
+BUILD_DISPLAY_NAME=#4
+XFILESEARCHPATH=/usr/dt/app-defaults/%L/Dt
+BUILD_CAUSE=MANUALTRIGGER
+BUILD_ID=4
+JOB_BASE_NAME=test-job
+SHLVL=3
+HOME=/var/lib/jenkins
+EXECUTOR_NUMBER=0
+JENKINS_SERVER_COOKIE=d00f6af7187fd82e
+NODE_LABELS=master
+LOGNAME=jenkins
+HUDSON_HOME=/var/lib/jenkins
+NODE_NAME=master
+JOB_DISPLAY_URL=http://unconfigured-jenkins-location/job/test-job/display/redirect
+BUILD_NUMBER=4
+ROOT_BUILD_CAUSE_MANUALTRIGGER=true
+HUDSON_COOKIE=d73809ae-123a-46b6-a5c1-1bd7f1d2fcd2
+Finished: SUCCESS
